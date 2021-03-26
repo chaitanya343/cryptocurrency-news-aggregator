@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>All Crypto Currencies Data (Prices converted to selected Currency):</h2>
+    <ul>
+        <li th:each="coin : *{coins}"><span th:text="${coin.symbol}"/>  :  <span th:text="${coin.convertedPrice}" /></li>
+    </ul>
+
+    <h2>News articles about (Selected Crypto Currency): </h2>
+    <ul>
+        <li th:each="article : *{articles}"><span th:text="${article.source_name}"/>  :  <span th:text="${article.title}" /></li>
+    </ul>
+
+    <p>
+        <a th:href="@{/}">Home</a>
+    </p>
+</body>
+</html>

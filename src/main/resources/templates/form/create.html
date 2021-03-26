@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" th:action="@{/form/create}" th:object="${form}" method="post">
+        <fieldset>
+            <label for="currIsoCode">Enter ISO Code of currency you want to see the crypto currency prices in</label> <input type="text" th:field="*{currIsoCode}" />
+
+            <label for="cryptoCurr">Enter name of Crypto Currency to see news <about></about></label> <input type="text" th:field="*{cryptoCurr}" />
+        </fieldset>
+        <input type="submit" id="submitButton" th:value="Save"> <input type="reset" id="resetButton" name="reset" th:value="Reset" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Currency List Page</h1>
+    <p>Currency ISO Code : Currency Name</p>
+    <ul>
+        <li th:each="rate : *{rates}"><span th:text="${rate.symbol}"/>  :  <span th:text="${rate.id}" /></li>
+    </ul>
+    <p>
+        <a th:href="@{/form/create}">Fill form</a>
+    </p>
+
+</body>
+</html>
